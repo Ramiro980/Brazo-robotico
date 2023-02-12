@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sliders</title>
+    <style>
+        input[type="range"] {
+            width: 450px;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <label for="data1">Izquierda--Derecha:</label>
+        <input type="range" id="data1" name="data1Value" min="0" max="180" oninput="updateValue(this.value, 'data1')">
+        <span id="data1Value">90</span>
+        <input type="hidden" id="data1Hidden" name="data1Hidden" value="0">
+
+        <br>
+        <label for="data2">Adelante--Atras:</label>
+        <input type="range" id="data2" name="data2Value" min="0" max="180" oninput="updateValue(this.value, 'data2')">
+        <span id="data2Value">90</span>
+        <input type="hidden" id="data2Hidden" name="data2Hidden" value="0">
+        <br>
+        
+        <label for="data3">Arriba--Abajo:</label>
+        <input type="range" id="data3" name="data3Value" min="0" max="180" oninput="updateValue(this.value, 'data3')">
+        <span id="data3Value">90</span>
+        <input type="hidden" id="data3Hidden" name="data3Hidden" value="0">
+        
+        <br>
+        <label for="data4">Pinza:</label>
+        <input type="range" id="data4" name="data4Value" min="0" max="90" oninput="updateValue(this.value, 'data4')">
+        <span id="data4Value">45</span>
+        <input type="hidden" id="data4Hidden" name="data4Hidden" value="0">
+    
+    </form>
+</body>
+<script>
+function updateValue(value, data) {
+    document.getElementById(data + 'Value').innerHTML = value;
+    document.getElementById(data + 'Hidden').value = value;
+
+    // Enviar petición HTTP al servidor
+    fetch('/', {
+        method: 'POST',
+        body: JSON.stringify({ [data]: value }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+</script>
+</html>

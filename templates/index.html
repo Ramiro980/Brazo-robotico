@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.B.R.</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <div class="Titulo">
+        <h1>Control Remoto | Brazo Robot</h1>
+    </div>
+
+    <div class="Max_box">
+        <div class="box_ls">
+            <form action="/" method="post">
+                <div class="sl">
+                    <label for="D1">Left - Rigth (0° a 180°)</label>
+                    <input type="range" id="D1" name="D1value" min="0" max="180" value="90" aria-label="Adjust Left-right position">
+                    <span id="D1value">90</span>
+                </div>
+
+                <div class="sl">
+                    <label for="D2">Up - Down (0° a 180°)</label>
+                    <input type="range" id="D2" name="D2value" min="0" max="180" value="90" aria-label="Adjust up-down position">
+                    <span id="D2value">90</span>
+                </div>
+    
+                <div class="sl">
+                    <label for="D3">Forward - Back (0° a 180°)</label>
+                    <input type="range" id="D3" name="D3value" min="0" max="180" value="90" aria-label="Adjust forward-back position">
+                    <span id="D3value">90</span>
+                </div>   
+            </form>
+        </div>
+
+        <div class="box_im">
+            <h2>Vision de Brazo</h2>
+        </div>
+    </div>
+
+    <div class="Bot">
+        <button type="button" id="close">Cerrar</button>
+        <button type="button" id="open">Abrir</button>
+    </div>
+</body>
+</html>

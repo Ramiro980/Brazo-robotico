@@ -1,0 +1,87 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+    background: url(imagenes/fondo.avif) center /cover fixed;
+}
+
+.Titulo{
+    text-align: center;
+    margin: 10px 30px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #fff;
+    color: #fff;
+    background-color: rgba(0, 93, 155, 0.575);
+}
+
+.sl{
+    margin: 20px;
+    padding: 1rem;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    max-width: 300px;
+    background-color: rgba(0, 93, 155, 0.575);
+}
+
+.Max_box{
+    margin: 20px 15px;
+    display: flex;
+}
+
+.box_ls{
+    width: 50%;
+}
+
+.box_im{
+    margin: 10px 15px;
+    width: 50%;
+    max-width: 800px;
+    height: auto;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    background-color: rgba(0, 93, 155, 0.575);
+}
+
+.Bot{
+    margin-left: 30%;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    width: 200px;
+    background-color: rgba(0, 93, 155, 0.575);
+}
+
+button{
+    color: #fff;
+    background-color: #122b4e;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-family: "Krona One", serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+label{
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+span{
+    color: #fff;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+input{
+    width: 100%;
+    margin: 10px 0;
+}
